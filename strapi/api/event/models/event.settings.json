@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "start_at": {
+      "type": "datetime"
+    },
+    "end_at": {
+      "type": "datetime"
+    },
+    "streamkey": {
+      "type": "string"
+    },
+    "fienta_id": {
+      "type": "string"
+    },
+    "description_english": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "festival": {
+      "via": "events",
+      "model": "festival"
+    },
+    "description_estonian": {
+      "type": "richtext"
+    },
+    "chat": {
+      "type": "boolean",
+      "default": true
+    },
+    "controls": {
+      "type": "text"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "intro_english": {
+      "type": "text"
+    },
+    "details": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "live": {
+      "type": "boolean",
+      "default": true
+    },
+    "live_url": {
+      "type": "string"
+    }
+  }
+}

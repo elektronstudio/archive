@@ -1,0 +1,7 @@
+{
+  "name": "ws",
+  "private": true,
+  "dependencies": {
+    "ws": "^7.3.1"
+  }
+}

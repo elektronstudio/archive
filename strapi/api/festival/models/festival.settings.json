@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "festivals",
+  "info": {
+    "name": "Festival",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "fienta_id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description_english": {
+      "type": "richtext"
+    },
+    "events": {
+      "via": "festival",
+      "collection": "event"
+    },
+    "description_estonian": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "archived": {
+      "type": "boolean",
+      "default": false
+    },
+    "intro": {
+      "type": "text"
+    },
+    "authors": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "intro_english": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

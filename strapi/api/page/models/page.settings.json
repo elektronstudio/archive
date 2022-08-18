@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description_english": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "description_estonian": {
+      "type": "richtext"
+    }
+  }
+}
